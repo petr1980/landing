@@ -65,6 +65,7 @@ video.addEventListener('ended', () => {
 
 btn.addEventListener('click', () => {
     document.body.scrollTop  = 10 * playbackConst;
+    console.log(document.body.scrollTop);
 });
 
 
