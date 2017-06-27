@@ -1,0 +1,61 @@
+.hero {
+  min-height: 590px;
+  padding: 174px 0;
+  text-align: center;
+  color: #fff;
+  background: #ccc url('../images/hero-bg.jpg') center/cover no-repeat;
+
+  &__about {
+    font-family: $ff-main-bold;
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 27px;
+    font-family: $ff-main-light;
+  }
+
+
+  @media (max-width: 599px) {
+    padding: 100px 20px;
+    min-height: inherit;
+  }
+
+    .button--text-uppercase {
+    padding: 21px 41px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+#set-height {
+
+}
+#video {
+  position: fixed; 
+  top: 0;  
+  left: 0;  
+  width: 100%;
+  z-index: 5;
+}
+
+#time {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  z-index: 10;
+}
+
+#btn {
+  position: fixed;
+  top: 7rem;
+  left: 1rem;
+  z-index: 20;
+}
