@@ -1,0 +1,16 @@
+mixin icon(name,mod)
+  - mod = mod || ''
+  svg(class="icon icon--" + name + ' ' + mod)
+    use(xlink:href="/images/sprite.svg#" + name)
+
+
+#videosection
+  #set-height
+  p#time 
+    span время видео
+  #btn.button.button--yellow  установить на 10 секундах
+  #removeBtn.button.button--red  закрыть видео
+    +icon('facebook','red_mod')
+  video(id="video",  tabindex="0", autobuffer preload)
+   <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="video/Chrome_ImF.webm"></source>
+    p Sorry, your browser does not support the &lt;video&gt; element.

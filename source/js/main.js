@@ -40,27 +40,36 @@
 
 /*video play*/
 (function(){
+window.onload = function(){
+
+
+    var videosection = document.getElementById('videosection'); 
     var time = document.getElementById('time'); 
     var btn = document.getElementById('btn'); 
-var frameNumber = 0, // start video at frame 0
-                     // lower numbers = faster playback
-
-    playbackConst = 500,  // get page height from video duration
-    setHeight = document.getElementById("set-height"), 
+    var removeBtn = document.getElementById('removeBtn'); 
+    var frameNumber = 0; // start video at frame 0  lower numbers = faster playback
+    var playbackConst = 500;  // get page height from video duration
+    var setHeight = document.getElementById("set-height"); 
     // select video element         
-    video = document.getElementById('video'); 
+    var video = document.getElementById('video'); 
     // var video = $('#v0')[0]; // jquery option
 
 // dynamically set the page height according to video length
-video.addEventListener('loadedmetadata', function() {
-  document.body.scrollTop = 0; 
+video.addEventListener('loadedmetadata', setScrollvideo);
 
-  setHeight.style.height = Math.floor(video.duration) * playbackConst + "px";
-});
+function setScrollvideo(){
+    document.body.scrollTop = 0; 
+    setHeight.style.height = Math.floor(video.duration) * playbackConst + "px";
+    console.log(video.readyState);
+}; 
+
 
 video.addEventListener('ended', () => {
-    video.style.display = 'none';
-    setHeight.style.height = 0;
+    videosection.style.display = 'none';
+});
+
+removeBtn.addEventListener('click', () => {
+    videosection.style.display = 'none';
 });
 
 btn.addEventListener('click', () => {
@@ -80,5 +89,8 @@ function scrollPlay(){
 }
 
 window.requestAnimationFrame(scrollPlay);   
+
+
+};
 
 })();

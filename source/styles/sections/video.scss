@@ -1,0 +1,45 @@
+#set-height {
+
+}
+#video {
+  position: fixed; 
+  top: 0;  
+  left: 0;  
+  width: 100%;
+  z-index: 5;
+}
+
+#time {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  z-index: 10;
+}
+
+#btn {
+  position: fixed;
+  top: 7rem;
+  left: 1rem;
+  z-index: 20;
+  color: #000;
+}
+#removeBtn {
+	 position: fixed;
+  top: 14rem;
+  left: 1rem;
+  z-index: 20;
+}
+
+.icon--facebook  {
+	font-size:3em;
+	transition:.5s;
+}
+
+#removeBtn:hover .icon--facebook.red_mod {
+		color: #000;
+	 stroke:#fff; 
+		stroke-width:1;
+}
