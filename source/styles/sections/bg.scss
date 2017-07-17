@@ -1,0 +1,80 @@
+.bg {
+  &__cover {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  &__inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+     animation-timing-function: cubic-bezier(0,0,0,.93);
+  }
+
+}
+
+.anim .bg {
+  &__first {
+     animation: firstAnim 3s forwards;   
+  }
+  &__second {
+     animation: secondAnim 3s forwards;   
+  }
+  &__t3 {
+     animation: t3Anim 3s forwards;     
+  }
+  &__t4 {
+     animation: t4Anim 3s forwards;      
+  }
+}
+
+.reverse .bg {
+  &__first {
+    animation: firstReverseAnim .5s forwards; 
+  }
+  &__second {
+    animation: secondReverseAnim .5s forwards;  
+  }
+  &__t3 {
+     animation: t3AnimReverse .5s forwards;     
+  }
+  &__t4 {
+     animation: t4AnimReverse .5s forwards;      
+  }  
+}
+
+
+@keyframes firstAnim {
+  100% {transform: scale(1.1)}
+}
+@keyframes secondAnim {
+  100% {transform: translate(2%, 0)}
+}
+@keyframes firstReverseAnim {
+  0% {transform: scale(1.1)}
+  100% {transform: scale(1)}
+}
+@keyframes secondReverseAnim {
+  0% {transform: translate(2%, 0)}
+  100% {transform: translate(0, 0)}
+}
+
+@keyframes t3Anim {
+  100% {transform: scale(1.01)}
+}
+@keyframes t4Anim {
+  100% {transform: translate(1%, 0)}
+}
+@keyframes t3AnimReverse {
+  0% {transform: scale(1.01)}
+  100% {transform: scale(1)}
+}
+@keyframes t4AnimReverse {
+  0% {transform: translate(1%, 0)}
+  100% {transform: translate(0, 0)}
+}

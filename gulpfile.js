@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
 const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglifyjs');  // сжимаем js
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano'); 
 const concat = require('gulp-concat');
@@ -62,7 +62,8 @@ gulp.task('js', function() {
             'source/js/validation.js',
             'source/js/form.js',
             'source/js/navigation.js',
-            'source/js/main.js'
+            'source/js/main.js',
+            'source/js/anim.js'
         ])
         .pipe(sourcemaps.init())
         .pipe(plumber({

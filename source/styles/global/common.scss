@@ -2,6 +2,9 @@
   max-width: 1024px;
   margin: auto;
 }
+.full-height {
+  height: 100vh;
+}
 
 .is-hidden {
   display: none!important;
@@ -10,4 +13,16 @@
 .visually-hidden {
   text-indent: -9999px;
   font-size: 0;
+}
+
+
+
+.Picasa-anim {
+  width: 200px;
+}
+
+.aminSvg2 {
+  .st0{fill:#1D1D1D;stroke:#000000;stroke-miterlimit:10;}
+  .st1{fill:#88C540;}
+  .st2{fill:none;stroke:#E5285D;stroke-miterlimit:10;}
 }
