@@ -1,6 +1,6 @@
 nav.nav
-  - var items = ['Home', 'About us', 'Our Approch', 'Our Work', 'svganim']
-  - var dataItems = ['header', 'about', 'approach', 'work', 'svg']
+  - var items = ['Home', 'About us', 'Our Approch', 'Our Work', 'svganim', 'webgl']
+  - var dataItems = ['header', 'about', 'approach', 'work', 'svg', 'webgl']
   each item, key in items
     if item === 'Home'
       a.nav__link.nav__link--active(href="#" data-link=dataItems[key])= item

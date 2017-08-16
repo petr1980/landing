@@ -64,7 +64,7 @@
         function setScrollvideo() {
             //    document.body.scrollTop = 0;
             setHeight.style.height = Math.floor(video.duration) * playbackConst + "px";
-            console.log(video.readyState);
+         //   console.log(video.readyState);
         };
 
 

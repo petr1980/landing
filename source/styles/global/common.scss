@@ -26,3 +26,12 @@
   .st1{fill:#88C540;}
   .st2{fill:none;stroke:#E5285D;stroke-miterlimit:10;}
 }
+
+.webgl {
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  >div {width: 100%;text-align: center;}
+}

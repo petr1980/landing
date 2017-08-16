@@ -63,7 +63,8 @@ gulp.task('js', function() {
             'source/js/form.js',
             'source/js/navigation.js',
             'source/js/main.js',
-            'source/js/anim.js'
+            'source/js/anim.js',
+            'source/js/webgl.js',
         ])
         .pipe(sourcemaps.init())
         .pipe(plumber({
